@@ -25,8 +25,6 @@ interface UserInterface extends \FOS\UserBundle\Model\UserInterface
 
     /**
      * @param string $code
-     *
-     * @return string
      */
     public function setTwoStepVerificationCode($code);
 }

@@ -11,8 +11,7 @@
 
 namespace Sonata\UserBundle\Model;
 
-use FOS\UserBundle\Entity\User as AbstractedUser;
-use Sonata\UserBundle\Model\UserInterface;
+use FOS\UserBundle\Model\User as AbstractedUser;
 
 /**
  * Represents a User model
@@ -193,10 +192,14 @@ abstract class User extends AbstractedUser implements UserInterface
      * Sets the credentials expiration date
      *
      * @param \DateTime|null $date
+     *
+     * @return $this
      */
     public function setCredentialsExpireAt(\DateTime $date = null)
     {
         $this->credentialsExpireAt = $date;
+
+        return $this;
     }
 
     /**
